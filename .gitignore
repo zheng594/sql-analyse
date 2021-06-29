@@ -1,6 +1,7 @@
 # misc
 .DS_Store
 
+*.iml
 .idea
 **/target
 **/deploy.iml
