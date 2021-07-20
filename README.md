@@ -1,2 +1,2 @@
 # sql-analyse
-analyse sql
+Sql语法解析

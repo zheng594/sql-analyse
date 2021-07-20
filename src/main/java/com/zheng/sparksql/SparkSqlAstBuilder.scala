@@ -8,7 +8,7 @@ import org.apache.spark.sql.catalyst.parser.{SqlBaseBaseVisitor, SqlBaseParser}
 
 import java.util
 
-class CustomSqlAstBuilder extends SqlBaseBaseVisitor[AnyRef]{
+class SparkSqlAstBuilder extends SqlBaseBaseVisitor[AnyRef]{
 
 
     /**

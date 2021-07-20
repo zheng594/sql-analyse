@@ -1,5 +1,6 @@
 package com.zheng.sparksql
 
+import com.zheng.custom.UpperCaseCharStream
 import org.antlr.v4.runtime.atn.PredictionMode
 import org.antlr.v4.runtime.misc.ParseCancellationException
 import org.antlr.v4.runtime.{CharStreams, CommonTokenStream}
@@ -10,9 +11,9 @@ import org.apache.spark.sql.catalyst.trees.Origin
 /**
  * spark sql解析器
  */
-class SqlParser {
+class SparkSqlParser {
     private var parser: SqlBaseParser = null
-    private val builder = new CustomSqlAstBuilder()
+    private val builder = new SparkSqlAstBuilder()
 
     def getParser(command: String): SqlBaseParser = {
         val lexer = new SqlBaseLexer(new UpperCaseCharStream(CharStreams.fromString(command)))
