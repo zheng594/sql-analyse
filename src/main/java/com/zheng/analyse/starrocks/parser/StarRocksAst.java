@@ -1,9 +1,9 @@
 package com.zheng.analyse.starrocks.parser;
 
+import com.google.common.collect.Lists;
 import com.zheng.analyse.spark.model.*;
 import com.zheng.analyse.starrocks.antlr4.StarRocksBaseVisitor;
 import com.zheng.analyse.starrocks.antlr4.StarRocksParser;
-import com.google.common.collect.Lists;
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ParseTree;
 
@@ -143,6 +143,9 @@ public class StarRocksAst extends StarRocksBaseVisitor {
             } else if (identifiers.size() == 2) {
                 db = identifiers.get(0).getText();
                 tableName = identifiers.get(1).getText();
+            } else if (identifiers.size() == 1) {
+                db = "";
+                tableName = identifiers.get(0).getText();
             } else {
                 throw new BizException("表信息输入错误,请遵循database.tableName的形式");
             }
