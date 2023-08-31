@@ -1,6 +1,6 @@
 # sql-analyse
 Sql语法解析
-#### 目前已支持spark sql、presto、starrocks四种类型的sql解析
+#### 目前已支持spark sql、presto、starrocks的sql解析
 
 ##### Spark SQL
 ###### 1、支持根据create语句获取库名、表名、字段名、字段备注、字段类型等信息
