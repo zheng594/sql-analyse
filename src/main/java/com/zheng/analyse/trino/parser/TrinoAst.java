@@ -1,9 +1,9 @@
-package com.zheng.analyse.trino;
+package com.zheng.analyse.trino.parser;
 
 import com.zheng.analyse.trino.antlr4.TrinoSqlBaseBaseVisitor;
 import com.zheng.analyse.trino.antlr4.TrinoSqlBaseParser;
 
-public class TrinoAstBuilder extends TrinoSqlBaseBaseVisitor {
+public class TrinoAst extends TrinoSqlBaseBaseVisitor {
     @Override
     public Object visitSingleStatement(TrinoSqlBaseParser.SingleStatementContext ctx) {
         return super.visitSingleStatement(ctx);
